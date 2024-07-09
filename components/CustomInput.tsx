@@ -32,6 +32,7 @@ const CustomInput = ({
           <div className="flex w-full flex-col">
             <FormControl>
               <Input
+                id={`${label}-${name}`}
                 placeholder={placeholder}
                 className="input-class"
                 type={type}
