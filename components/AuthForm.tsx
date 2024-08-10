@@ -22,7 +22,6 @@ import Link from "next/link";
 import CustomInput from "./CustomInput";
 import { authFormSchema } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
-import SignUp from "@/app/(auth)/sign-up/page";
 import { getLoggedInUser, signIn, signUp } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
 
@@ -113,19 +112,21 @@ const AuthForm = ({ type }: { type: string }) => {
                     />
                   </div>
 
-                  <CustomInput
-                    control={form.control}
-                    label="Address"
-                    name="address1"
-                    placeholder={"Enter your specific address"}
-                  />
+                  <div className="flex gap-4">
+                    <CustomInput
+                      control={form.control}
+                      label="Address"
+                      name="address1"
+                      placeholder={"Enter your specific address"}
+                    />
 
-                  <CustomInput
-                    control={form.control}
-                    label="City"
-                    name="city"
-                    placeholder={"Enter your city"}
-                  />
+                    <CustomInput
+                      control={form.control}
+                      label="City"
+                      name="city"
+                      placeholder={"Enter your city"}
+                    />
+                  </div>
 
                   <div className="flex gap-4">
                     <CustomInput
@@ -193,7 +194,7 @@ const AuthForm = ({ type }: { type: string }) => {
               </div>
             </form>
           </Form>
-          <footer className="flex justify-center gap-1 mt-2">
+          <footer className="flex justify-center gap-1">
             <p className="text-14 font-normal text-gray-600">
               {type === "sign-in"
                 ? "Don't have an account?"

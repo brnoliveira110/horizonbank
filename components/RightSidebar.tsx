@@ -14,12 +14,12 @@ export const RightSidebar = ({
         <div className="profile-banner" />
         <div className="profile">
           <div className="profile-img">
-            <span>{user.name[0]}</span>
+            <span>{user?.name[0]}</span>
           </div>
 
           <div className="profile-details">
-            <h1 className="profile-name">{user.name}</h1>
-            <p className="profile-email">{user.email}</p>
+            <h1 className="profile-name">{user?.name}</h1>
+            <p className="profile-email">{user?.email}</p>
           </div>
         </div>
       </section>
@@ -39,7 +39,7 @@ export const RightSidebar = ({
               <BankCard
                 key={banks[0].$id}
                 account={banks[0]}
-                userName={`${user.name}`}
+                userName={user?.name}
                 showBalance={false}
               />
             </div>
@@ -48,7 +48,7 @@ export const RightSidebar = ({
                 <BankCard
                   key={banks[1].$id}
                   account={banks[1]}
-                  userName={`${user.name}`}
+                  userName={user?.name}
                   showBalance={false}
                 />
               </div>

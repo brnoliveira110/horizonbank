@@ -2,11 +2,9 @@ import AuthForm from "@/components/AuthForm";
 
 const SignUp = async () => {
   return (
-    <div>
-      <section className="flex-center size-full max-sm:px-6">
-        <AuthForm type="sign-up" />
-      </section>
-    </div>
+    <section className="flex-center size-full max-sm:px-6">
+      <AuthForm type="sign-up" />
+    </section>
   );
 };
 
